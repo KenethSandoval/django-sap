@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bievenido</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Sistema de Administracion de Personas (SAP)</h1>
+    <div>Numero de personas: {{num_personas}}</div>
     <div>
-        {{msg1}}
+      <a href="nueva_persona">Nueva Persona</a>
     </div>
-</body>
+
+    <div>
+      <ul>
+        {% for persona in personas %}
+        <li>
+            Persona {{persona.id}}: {{persona.nombre}} {{pesona.apellido}} {{persona.email}}
+            <a href="detalle_persona/{{persona.id}}">Ver detalle</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </body>
 </html>
