@@ -6,7 +6,7 @@ from personas.models import Persona
 
 def bienvenido(request):
     num_personas = Persona.objects.count()
-    personas = Persona.objects.all()
+    personas = Persona.objects.order_by('id')
 
     diccionario = {
         'num_personas': num_personas,
