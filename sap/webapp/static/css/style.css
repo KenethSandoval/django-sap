@@ -1,18 +1,20 @@
-body{
+body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
+  background-color: #6a6969;
+  color: #fff;
 }
 
-header{
+header {
   position: fixed;
-  background-color: #22242A;
+  background-color: #22242a;
   padding: 20px;
   width: 100%;
   height: 30px;
 }
 
-.left_area h3{
+.left_area h3 {
   color: #fff;
   margin: 0;
   text-transform: uppercase;
@@ -20,13 +22,13 @@ header{
   font-weight: 900;
 }
 
-.left_area span{
-  color: #1DC4E7;
+.left_area span {
+  color: #1dc4e7;
 }
 
-.logout_btn{
+.logout_btn {
   padding: 5px;
-  background-color: #19B3D3;
+  background-color: #19b3d3;
   text-decoration: none;
   float: right;
   margin-top: -30px;
@@ -40,11 +42,11 @@ header{
 }
 
 .logout_btn:hover {
-  background-color: #0D9DBB;
+  background-color: #0d9dbb;
 }
 
 .sidebar {
-  background: #2F323A;
+  background: #2f323a;
   margin-top: 70px;
   padding-top: 30px;
   position: fixed;
@@ -80,11 +82,11 @@ header{
   transition-property: background;
 }
 
-.sidebar a:hover{
+.sidebar a:hover {
   background-color: #19b3d3;
 }
 
-.sidebar i{
+.sidebar i {
   padding-right: 10px;
 }
 
@@ -93,19 +95,17 @@ label #sidebar_btn {
   color: #fff;
   position: fixed;
   cursor: pointer;
-  left: 300px;
   font-size: 20px;
   margin: 5px 0;
-  transition:0.5s;
+  transition: 0.5s;
   transition-property: color;
 }
 
 label #sidebar_btn:hover {
-  color: #19B3D3;
-
+  color: #19b3d3;
 }
 
-#check:checked ~ .sidebar{
+#check:checked ~ .sidebar {
   left: -190px;
 }
 
@@ -113,7 +113,7 @@ label #sidebar_btn:hover {
   display: none;
 }
 
-#check:checked ~ .sidebar a{
+#check:checked ~ .sidebar a {
   font-size: 20px;
   margin-left: 170px;
   width: 80px;
@@ -123,12 +123,50 @@ label #sidebar_btn:hover {
   margin-left: 250px;
   height: 100vh;
   transition: 0.5s;
+  width: 1037px;
+  position: fixed;
 }
+
+/*TABLE*/
+.section_table {
+  margin-top: 140px;
+  margin-left: 20px;
+}
+
+table {
+  font-size: 12px;
+  margin-top: 15px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  font-size: 18px;
+  font-weight: normal;
+  padding: 8px;
+  background: #22242a;
+  border-top: 4px solid #22242a;
+  color: #fff;
+}
+
+td {
+  padding: 8px;
+  background: #2f323a;
+  border-bottom: 1px solid #22242a;
+  color: #fff;
+  border-top: 1px solid transparent;
+  font-size: 18px;
+}
+
+tr:hover td {
+  background: #585858;
+}
+/*END TABLE*/
 
 #check:checked ~ .content {
   margin-left: 60px;
 }
 
-#check{
+#check {
   display: none;
 }
