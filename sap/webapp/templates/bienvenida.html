@@ -49,11 +49,18 @@
           <a href="#"><i class="fas fa-archive"></i> <span>Registros</span> </a>
           <a href="#"><i class="fas fa-th"></i> <span>Forms</span> </a>
           <a href="#"><i class="fas fa-info-circle"></i> <span>About</span> </a>
-          <a href="#" style="margin-top:237px;"><i class="fas fa-cog fa-spin"></i> <span>Settings</span> </a>
+          <a href="#" style="margin-top: 237px" id="settings"
+            ><i class="fas fa-cog" id="newsettings"></i> <span>Settings</span>
+          </a>
         </div>
         <!--Sidebar area end-->
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+          <button class="btn btn-success mb-3">
+            <a href="nueva_persona" style="text-decoration: none; color: #fff;"
+              ><i class="fas fa-plus mr-1"></i>Agregar</a
+            >
+          </button>
           <div class="card bg-dark">
             <div class="card-body">
               <h4 class="card-title">Total de personas</h4>
@@ -106,5 +113,7 @@
         </main>
       </div>
     </div>
+
+    <script src="{% static 'js/index.js' %}"></script>
   </body>
 </html>
