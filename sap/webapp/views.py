@@ -13,4 +13,4 @@ def bienvenido(request):
         'personas': personas
     }
 
-    return render(request, 'bienvenida.html', diccionario)
+    return render(request, 'tabla.html', diccionario)
