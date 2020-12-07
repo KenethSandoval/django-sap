@@ -3,8 +3,10 @@ from django.http import HttpResponse
 from personas.models import Persona
 
 # Create your views here.
+def index(request):
+    return render(request, 'index.html', {})
 
-def bienvenido(request):
+def tablas(request):
     num_personas = Persona.objects.count()
     personas = Persona.objects.order_by('id')
 
@@ -14,3 +16,6 @@ def bienvenido(request):
     }
 
     return render(request, 'tabla.html', diccionario)
+
+def dashboard(request):
+    return render(request, 'dashboard.html', {})

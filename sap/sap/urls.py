@@ -16,14 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from webapp.views import bienvenido
+from webapp.views import tablas, dashboard, index
 from personas.views import detallePersona, nuevaPersona, editarPersona, eliminarPersona
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', bienvenido, name='index'),
+    path('', index, name='index'),
+    path('tablas/', tablas),
     path('detalle_persona/<int:id>', detallePersona),
     path('nueva_persona', nuevaPersona),
     path('editar_persona/<int:id>', editarPersona),
-    path('eliminar_persona/<int:id>', eliminarPersona)
+    path('eliminar_persona/<int:id>', eliminarPersona),
+    path('dashboard/', dashboard)
 ]
