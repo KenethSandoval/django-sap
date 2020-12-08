@@ -1,26 +1,27 @@
-{% extends "base.html" %} {% block title %}Tablas{% endblock %} 
+{% extends "base.html" %}
+{% block title %}Tablas{% endblock %} 
 
-{% block content%}
+{% block tables%}
 <button class="btn btn-success mb-3">
-  <a href="nueva_persona" style="text-decoration: none; color: #fff"
-    ><i class="fas fa-plus mr-1"></i>Agregar</a
+  <a href="/nueva_persona" style="text-decoration: none; color: #fff"
+    ><i class="material-icons">add_box</i>Agregar</a
   >
 </button>
-<div class="card bg-dark">
-  <div class="card-body">
-    <h4 class="card-title">Total de personas</h4>
-    <h6 class="card-subtitle">({{num_personas}})</h6>
 
-    <div class="content">
-      <div class="table-responsive">
-        <table class="table table-dark">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Nombre</th>
-              <th>Email</th>
-              <th>Opciones</th>
-            </tr>
+<div class="row">
+  <div class="col-lg-12 col-md-12">
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title">Total people <span>({{num_personas}})</span></h4>
+        <p class="card-category">New people on 15th September</p>
+      </div>
+      <div class="card-body table-responsive">
+        <table class="table table-hover">
+          <thead class="text-warning">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Choices</th>
           </thead>
           <tbody>
             {% for persona in personas %}
@@ -30,20 +31,20 @@
               <td>{{persona.email}}</td>
               <td>
                 <button class="btn btn-dark">
-                  <a href="detalle_persona/{{persona.id}}"
-                    ><i class="fas fa-eye"></i
+                  <a href="/detalle_persona/{{persona.id}}"
+                    ><i class="material-icons">visibility</i
                   ></a>
                 </button>
 
                 <button class="btn btn-info">
-                  <a href="editar_persona/{{persona.id}}"
-                    ><i class="fas fa-edit"></i
+                  <a href="/editar_persona/{{persona.id}}"
+                    ><i class="material-icons">edit</i
                   ></a>
                 </button>
 
                 <button class="btn btn-danger">
-                  <a href="eliminar_persona/{{persona.id}}"
-                    ><i class="fas fa-trash-alt"></i
+                  <a href="/eliminar_persona/{{persona.id}}"
+                    ><i class="material-icons">delete</i
                   ></a>
                 </button>
               </td>

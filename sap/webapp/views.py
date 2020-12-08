@@ -4,7 +4,7 @@ from personas.models import Persona
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html', {})
+    return render(request, 'base.html', {})
 
 def tablas(request):
     num_personas = Persona.objects.count()

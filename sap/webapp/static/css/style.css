@@ -1,22 +1,8 @@
-body {
-  font-family: "Lato", sans-serif;
-  background-color: #6a6969 !important;
-  color: #fff !important;
-}
-
-header {
-  position: fixed;
-  padding: 10px;
-  width: 100%;
-  top: 0px;
-  background-color: #22242a;
-}
-
-.left_area h3 {
+.left_area p {
+  margin-left: 5px;
+  margin-right: 5px;
   color: #fff;
-  margin: 0;
   text-transform: uppercase;
-  font-size: 22px;
   font-weight: 900;
 }
 
@@ -24,6 +10,47 @@ header {
   color: #1dc4e7;
 }
 
+label #sidebar_btn {
+  cursor: pointer;
+  transition: 0.5s;
+  transition-property: color;
+  margin: 4px 25px;
+  font-size: 32px;
+}
+
+label #sidebar_btn:hover {
+  color: #19b3d3;
+}
+
+.sidebar {
+  transition: 0.7s;
+  transition-property: left;
+}
+
+#check:checked ~ .wrapper .sidebar {
+  left: -190px;
+}
+
+#check:checked ~ .wrapper .sidebar a p {
+  display: none;
+}
+
+#check:checked ~ .wrapper .sidebar .nav i {
+  font-size: 30px;
+  float: none;
+  margin-left: 170px;
+}
+
+#check:checked ~ .wrapper .sidebar .left_area p {
+  display: none;
+}
+
+
+#check {
+  display: none;
+}
+
+/*
 .container-fluid .row .sidebar {
   background: #2f323a;
   margin-top: 70px;
@@ -56,30 +83,6 @@ header {
   padding-right: 10px;
 }
 
-main {
-  top: 10rem;
-}
- 
-.content table tbody button > a {
-  text-decoration: none;
-  color: #fff;
-}
-
-label #sidebar_btn {
-  z-index: 1;
-  color: #fff;
-  position: fixed;
-  cursor: pointer;
-  font-size: 20px;
-  margin: 5px 8px;
-  transition: 0.5s;
-  transition-property: color;
-}
-
-label #sidebar_btn:hover {
-  color: #19b3d3;
-}
-
 #check:checked ~ .container-fluid .row > .sidebar {
   left: -190px;
 }
@@ -97,3 +100,5 @@ label #sidebar_btn:hover {
 #check {
   display: none;
 }
+
+*/

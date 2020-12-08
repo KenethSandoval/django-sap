@@ -15,7 +15,7 @@ def nuevaPersona(request):
         formaPersona = PersonaForm(request.POST)
         if formaPersona.is_valid():
             formaPersona.save()
-            return redirect('index')
+            return redirect('/tablas')
     else:
         formaPersona = PersonaForm()
 
@@ -29,7 +29,7 @@ def editarPersona(request, id):
         formaPersona = PersonaForm(request.POST, instance=persona)
         if formaPersona.is_valid():
             formaPersona.save()
-            return redirect('index')
+            return redirect('/tablas')
     else:
         formaPersona = PersonaForm(instance=persona)
 
@@ -40,13 +40,13 @@ def eliminarPersona(request, id):
     persona = get_object_or_404(Persona, pk=id)
     if persona:
         persona.delete()
-        return redirect('index')
+        return redirect('/tablas')
 
     if request.method == 'POST':
         formaPersona = PersonaForm(request.POST, instance=persona)
         if formaPersona.is_valid():
             formaPersona.save()
-            return redirect('index')
+            return redirect('/tablas')
     else:
         formaPersona = PersonaForm(instance=persona)
 
