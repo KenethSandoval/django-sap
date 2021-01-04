@@ -1,0 +1,38 @@
+ {% extends 'home.html' %} 
+ {% block body %}
+<body class="dark-edition">
+    <input type="checkbox" id="check" />
+    <div class="wrapper">
+        <!-- Navbar -->
+        {% include 'vtc/header.html' %}
+        <!-- End Navbar -->
+
+        <!-- Sidebar -->
+        {% include 'vtc/sidebar.html' %}
+        <!-- end Sidebar -->
+		
+		<div class="content-wrapper">
+			<div class="content">
+				<div class="container-fluid">		
+					<div class="row">
+						<div class="col-sm-6">
+							
+					{% block content %}{% endblock %}
+						</div>
+					</div>
+
+				</div>
+			</div>    
+		<!-- Content-Wrapper -->
+		</div>
+	<!-- Wrapper -->
+    </div>
+
+    <script>
+        $(document).ready(function()
+        {
+            md.initDashboardPageCharts();
+        });
+    </script>
+</body>
+{% endblock %}
